@@ -123,12 +123,12 @@
 },
 "VPCId": {
 "Type": "AWS::EC2::VPC::Id",
-"Default": "vpc-0eb99e69373ac0855"
+"Default":"vpc-0eb99e69373ac0855"
 },
 "InstanceSubnetIdParameter": {
 "Description": "Launch EC2 instance in this subnet",
 "Type": "AWS::EC2::Subnet::Id",
-"Default": "subnet-0c8567d0c41561e5d"
+"Default":"subnet-0c8567d0c41561e5d"
 }
 },
 "Resources": {
@@ -152,7 +152,6 @@
 "EC2Instance": {
 "Type": "AWS::EC2::Instance",
 "Properties": {
-"AvailabilityZone": "ap-southeast-2a",
 "ImageId": {
 "Ref": "ImageId"
 },
