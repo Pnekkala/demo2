@@ -7,20 +7,6 @@ pipeline {
 stages {
 
 
-stage('Clone') {
-
-
-steps {
-
-
-sh 'git clone https://github.com/Pnekkala/demo2.git'
-
-}
-
-
-}
-
-
 stage('Test') {
 
 
