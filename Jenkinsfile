@@ -1,7 +1,7 @@
 pipeline {
 
 
-agent any
+ agent {label 'master'}
 
 
 stages {
@@ -13,7 +13,7 @@ stage('Clone') {
 steps {
 
 
-sh 'git clone https://github.com/NH-Anusha/demo.git
+sh 'git clone https://github.com/Pnekkala/demo2.git'
 
 }
 
@@ -42,7 +42,7 @@ stage('s3upload') {
 steps {
 
 
-sh '/usr/local/bin/aws s3 cp simples3bucket.json s3://aws-logs-786678469955-ap-southeast-2/simples3bucket.json'
+sh '/usr/local/bin/aws s3 cp instance.json s3://aws-logs-786678469955-ap-southeast-2/instance.json'
 
 
 }
@@ -63,7 +63,7 @@ sh 'cd /usr/local/bin/'
 sh 'ls'
 
 
-sh "/usr/local/bin/aws cloudformation create-stack --stack-name s3bucket --template-body file://simples3bucket.json --region 'ap-southeast-2'"
+sh "/usr/local/bin/aws cloudformation create-stack --stack-name DEVstack --template-body file://instance.json --region 'ap-southeast-2'"
 
 
 }
