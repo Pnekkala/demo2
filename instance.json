@@ -121,28 +121,12 @@
 "ConstraintDescription": "must be the name of an existing EC2 KeyPair.",
 "Default": "key_syd"
 },
-"VPCId": {
-"Type": "AWS::EC2::VPC::Id",
-"Default":"vpc-0eb99e69373ac0855"
-},
-"InstanceSubnetIdParameter": {
-"Description": "Launch EC2 instance in this subnet",
-"Type": "AWS::EC2::Subnet::Id",
-"Default":"subnet-0c8567d0c41561e5d"
-}
-},
 "Resources": {
-"VpcId": {
-"Ref": "VPCId"
-},
-"SubnetId":{
-"Ref":"InstanceSubnetIdParameter"
-},
-"EC2Instance": {
-"Type": "AWS::EC2::Instance",
-"Properties": {
-"ImageId": {
-"Ref": "ImageId"
+  "EC2Instance": {
+  "Type": "AWS::EC2::Instance",
+    "Properties": {
+      "ImageId": {
+       "Ref": "ImageId"
 },
 "InstanceType": {
 "Ref": "InstanceType"
