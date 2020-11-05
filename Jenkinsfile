@@ -49,7 +49,7 @@ sh 'cd /usr/local/bin/'
 sh 'ls'
 
 
-sh "/usr/local/bin/aws cloudformation create-stack --stack-name DEV1stack --template-body file://instance.json --region 'ap-southeast-2'"
+sh "/usr/local/bin/aws cloudformation create-stack --stack-name DEV123stack --template-body file://instance.json --region 'ap-southeast-2'"
 
 
 }
